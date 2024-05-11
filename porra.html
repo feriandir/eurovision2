@@ -1,0 +1,1244 @@
+<html>
+    <head>
+	    <link rel="stylesheet" type="text/css" href="./resources/w2ui-2.0.min.css">
+		<meta charset="UTF-8">
+	<style>
+	/* The Modal (background) */
+	.modal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 50px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+	
+	.modalvisage {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 1px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color:  rgba(0,0,0); /* Black w/ opacity */
+	  background-color:  rgba(0,0,0); /* Black w/ opacity */
+	  color:white;
+	}	
+
+	.modalinicio {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 1px; /* Location of the box */
+	  left: 100;
+	  top: 100;
+	  width: 50%; /* Full width */
+	  height: 70%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color:  #E7CCE0; /* Black w/ opacity */
+	  background-color:  #E7CCE0; /* Black w/ opacity */
+
+	}	
+
+	/* Modal Content */
+	.modal-content {
+	  background-color: #fefefe;
+	  margin: 0 0 0 0%;
+	  padding: 10px;
+	  border: 5px solid #FF33EC;
+	  width: 85%;
+	  height:85%;
+	  font-size:14;
+	  
+	.modal-contentvisage {
+	width: 55%;
+    height: 85%;
+	background-color: white;	
+    display: block;
+
+	} 	  
+	
+	.modal-contentinicio {
+	  background-color: #fefefe;
+	  margin: 0 0 0 0%;
+	  padding: 10px;
+	  border: 5px solid #FF33EC;
+	  width: 45%;
+	  height:45%;
+	  font-size:14;
+
+	} 	  	
+
+	}
+	.modal-content2 {
+	  background-color: #fefefe;
+	  padding:10px;
+      margin:-15% 0 0 0 0;
+	  font-size:14;
+	  	  
+	}
+	/* The Close Button */
+	
+	.close {
+	 float: right;
+	  font-size: 25px;
+	  font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	  color: GREEN;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+
+	.closev {
+	  margin: 0 0 0 50%;
+	  font-size: 25px;
+	  font-weight: bold;
+	}
+
+	.closev:hover,
+	.closev:focus {
+	  color: red;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+	
+	.close3 {
+		float: right;
+	  font-size: 25px;
+	  font-weight: bold;
+	}
+
+	.close3:hover,
+	.close3:focus {
+	  color: red;
+	  text-decoration: none;
+	  cursor: pointer;
+	}	
+	
+	
+	</style>
+
+        <title>Ruletita para cerrar</title>
+        <link rel="stylesheet" href="main.css" type="text/css" id="default"/>
+        <script type="text/javascript" src="fondo.js"></script>			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./resources/w2ui-2.0.min.js"></script>
+    </head>
+	
+
+    <body id="html-content-holder" style="background-color: #1a1a17; background-repeat: no-repeat; background-size: 100% 100%;" onload="GenerateTable('')"> 
+		<CENTER>
+	<table id="hdTable">	
+
+		<tr>
+			<td>
+			<img src="./resources/acierto.png" style="width:40px;margin-left: -0%;margin-top:150;cursor:pointer;" title="Selecciona aciertos" onclick="aciertos()">
+			<img src="./resources/fallo.png" style="width:38px;margin-top:1px;cursor:pointer;" title="Selecciona fallos" onclick="fallos()">
+			<img src="./resources/borrar.png" style="width:40px;margin-top:1px;cursor:pointer;" title="Borra porra actual" onclick="borrar()">
+			
+
+			</td>
+			<td>
+			<img src="./resources/lazo.png" style="width:300px;margin-top:1px;margin-left: 20%;;" title="Doritos para todos!">
+			</td>
+			
+			<td> 
+			<div style="margin-top:150;margin-left: 150;">
+			<a href="javascript:music('1','2');" id="vol" style="color:#1a1a17;width:50px;cursor:pointer;font-size:40" title="Activar/Desactivar efectos de sonido">🔈</a>
+			</div>
+			</td>
+			<td>
+			<img class="popup_image" src="./resources/new.png" style="width:35px;margin-top:1px;margin-top:150;cursor:pointer;" title="Instrucciones"  onclick="popup2()">
+			</td>			
+			<td style="color:white">
+			<img class="popup_image" src="./resources/help.png" style="width:40px;margin-top:1px;margin-top:150;cursor:pointer;" title="Instrucciones"  onclick="popup1()">
+			</td>
+			
+
+
+
+		</tr>	
+		
+	</table>			
+
+	<CENTER style="color:white">
+	
+	
+
+	<table id="dvTable">			
+	</table>				
+			
+			
+	<table class="juegoimgs" cellpadding="0" cellspacing="0">
+
+		<tr>									
+			<td style="width:100px;color:white"> Columnas</td>
+			<td><textarea id="textfileselect1" rows="1" cols="2" 
+				style="background-color:#FFFFFF;font-size: 18px;font-weight:bold;resize: none;" >6</textarea>
+			</td>
+
+		</tr>
+		<tr>									
+			<td style="width:100px;color:white"> Filas</td>
+			
+			
+			<td><textarea id="textfileselect2" rows="1" cols="2" 
+				style="background-color:#FFFFFF;font-size: 18px;font-weight:bold;resize: none;" >4</textarea>
+			</td>
+		</tr>
+						
+	</table>
+	<br>
+	<table>
+		<img id="spin" src="./resources/spin_on.png" alt="Spin" style="cursor:pointer" 
+		onClick="GenerateTable('1')" />
+	</table>	
+
+		<table  cellpadding="10" cellspacing="5" style="background-color:#1a1a17;margin: 0 0 0 0;">
+						
+							<tr>
+							
+							<th style="font-size:47;color:white">&#119070;<!--<img src="musical.png" style="width:50px;height:50px;" ><!--</th>!-->
+							<th>
+							<a href="javascript:music2(localStorage.getItem('music'),'1');" style="font-size:18;color:white;cursor:pointer;" title="Play">&#9658; Play
+							</th>
+							<th>
+							<a href="javascript:music2(localStorage.getItem('music'),'2');" style="font-size:18;color:white;cursor:pointer;"  title="Stop"> &#10074;&#10074; Stop
+							</th>
+							<th>
+							<a href="javascript:music2(localStorage.getItem('music'),'3');" style="font-size:18;color:white;cursor:pointer;" title="Siguiente"> &#9658;&#9658; Sig.
+							</th>
+							
+							<th>
+							<a href="javascript:music2(localStorage.getItem('music'),'4');" id="volupp" style="font-size:18;color:white;cursor:pointer;" title="Subir volumen">	&#128266; Vol +
+							
+							</th>							
+							
+							<th>
+							<a href="javascript:music2(localStorage.getItem('music'),'5');" id="voldown" style="font-size:18;color:white;cursor:pointer;" title="Bajar volumen">&#128265; Vol - 	
+							</th>
+
+																
+							</tr>	
+							
+
+						</table>	
+						
+						<table  cellpadding="20" cellspacing="1" style="margin: -3% 0 0 0;margin-left:4%" style="color:white;text-align: left;background-color:#1a1a17;">
+						<tr>	
+						<th id="musicinfo" style="color:white;text-align: left;background-color:#1a1a17;font-size:14"></th>	
+
+						</tr>	
+						</table>	
+<script>
+
+//pendiente
+//permitir añadir filas y columnas sin que se pierdan las imagenes
+
+
+window.popup1 = function popup1() {
+    w2popup.open({     
+		actions: ['Ok'],
+        width: 800,
+        height: 600,
+        modal: true,     
+		showClose: false,
+		body: '<img id="spin" src="./resources/ayuda.png"/>'
+    })  
+
+    .ok((evt) => {
+        console.log('ok', evt)
+        w2popup.close()
+
+    })
+	
+	document.getElementsByClassName("w2ui-lock")[0].style.height = "0px";
+	document.getElementsByClassName("w2ui-lock")[0].style.width = "0px";
+	document.getElementsByClassName("w2ui-popup")[0].style.position = "absolute";
+	document.getElementsByClassName("w2ui-popup-buttons")[0].style.backgroundColor="#1a1a17";
+	
+
+}
+
+window.popup2 = function popup2() {
+
+    w2popup.open({     
+		actions: ['Ok'],
+        width: 800,
+        height: 600,
+        modal: true,     
+		showClose: false,
+		body: '<div><table style=color:white;background-color:#1a1a17><tr><td>Versión 0.2 (actual)</td></tr><tr><td>Al editar la tabla se mantienen las imagenes en su casilla correspondiente</td></tr><tr><td>Añadido reproductor de música de fondo con las canciones míticas de la ruleta</td></tr><tr><td>Añadida sección de novedades</td></tr><tr><td>Geoff ahora fuma</td></tr><tr><td><br>Versión 0.1</td></tr><tr><td>Versión inicial</td></tr></table></div>'
+    })  
+    .ok((evt) => {
+        console.log('ok', evt)
+        w2popup.close()
+
+    })
+	
+	document.getElementsByClassName("w2ui-lock")[0].style.height = "0px";
+	document.getElementsByClassName("w2ui-lock")[0].style.width = "0px";
+	document.getElementsByClassName("w2ui-popup")[0].style.position = "absolute";
+	document.getElementsByClassName("w2ui-popup-buttons")[0].style.backgroundColor="#1a1a17";
+	
+
+}
+
+
+</script>
+			
+	
+<script>			
+	
+
+   function GenerateTable(edit) {
+   
+        //Build an array containing Customer records.
+		var src= './resources/drop.png';
+        var customers = new Array();
+		var x = document.getElementById("textfileselect1")
+		var y = document.getElementById("textfileselect2")
+		
+		
+		//significa que venimos por el botón
+		if(edit){		
+		
+			let customcontent = [];
+			
+			//Recorremos casillas actuales por si hay imagenes
+			var elements = document.getElementsByClassName("filedrag");	
+			for (var i = 0; i < elements.length; i++) {
+			
+				//var r = confirm("Estás seguro de borrar la porra actual?");
+				//if (r == true) {
+			
+				//	break
+				//}
+
+				if("."+ elements[i].childNodes[0].currentSrc.substr(elements[i].childNodes[0].currentSrc.length-(src.length-1),src.length)!==src){
+					customcontent.push(Array(elements[i].id,elements[i].childNodes[0].currentSrc));
+				}
+			}	
+			
+			if(customcontent.length>0){
+			
+				var r = confirm("Se borraran las imagenes de las filas/colummas eliminadas. ¿Desea continuar?");
+				if (r == true) {
+			
+
+					//Create a HTML Table element.
+					var table = document.createElement("TABLE");
+					table.border = "0";
+			 
+					//Get the count of columns.
+					var columnCount = Number(x.value);
+					var rowCount = Number(y.value);
+					
+					
+					//Add the header row.
+					var row = table.insertRow(-1);
+					for (var i = 0; i < columnCount; i++) {
+						var headerCell = document.createElement("TH");
+						//headerCell.innerHTML = customers[0][i];
+						if (customcontent.length>0 && (("filedrag0"+i)== customcontent[0][0])) {
+							headerCell.innerHTML = "<div class='filedrag' id='filedrag0"+i+"'><img class='tagged' src='"+customcontent[0][1]+"'></div></td>"
+							customcontent.splice(0,1);
+						}else{
+							headerCell.innerHTML = "<div class='filedrag' id='filedrag0"+i+"'><img class='tagged' src='"+src+"'></div></td>"
+						
+						}
+											
+						row.appendChild(headerCell);
+					}
+			 
+					//Add the data rows.
+					var cuenta = i-1
+
+					for (var i = 1; i < rowCount; i++) {
+						row = table.insertRow(-1);
+						for (var j = 0; j < columnCount; j++) {
+							var cell = row.insertCell(-1);
+							cuenta++
+							
+							if (customcontent.length>0 && (("filedrag"+i+j)== customcontent[0][0])) {
+								cell.innerHTML = "<div class='filedrag' id='filedrag"+i+j+"'><img class='tagged' src='"+customcontent[0][1]+"'></div></td>"
+								customcontent.splice(0,1);
+							}else{
+								cell.innerHTML = "<div class='filedrag' id='filedrag"+i+j+"'><img class='tagged' src='"+src+"'></div></td>"
+							
+							}
+						}
+					}	
+				
+			
+		 
+					var dvTable = document.getElementById("dvTable");
+					dvTable.innerHTML = "";
+					dvTable.appendChild(table);
+					src = document.getElementsByClassName("filedrag")[0].childNodes[0].currentSrc;
+					
+					Init()				
+				}
+			
+			}else{
+			
+			
+					//Create a HTML Table element.
+					var table = document.createElement("TABLE");
+					table.border = "0";
+			 
+					//Get the count of columns.
+					var columnCount = Number(x.value);
+					var rowCount = Number(y.value);
+					
+					
+					//Add the header row.
+					var row = table.insertRow(-1);
+					for (var i = 0; i < columnCount; i++) {
+						var headerCell = document.createElement("TH");
+						//headerCell.innerHTML = customers[0][i];
+						if (customcontent.length>0 && (("filedrag0"+i)== customcontent[0][0])) {
+							headerCell.innerHTML = "<div class='filedrag' id='filedrag0"+i+"'><img class='tagged' src='"+customcontent[0][1]+"'></div></td>"
+							customcontent.splice(0,1);
+						}else{
+							headerCell.innerHTML = "<div class='filedrag' id='filedrag0"+i+"'><img class='tagged' src='"+src+"'></div></td>"
+						
+						}
+											
+						row.appendChild(headerCell);
+					}
+			 
+					//Add the data rows.
+					var cuenta = i-1
+
+					for (var i = 1; i < rowCount; i++) {
+						row = table.insertRow(-1);
+						for (var j = 0; j < columnCount; j++) {
+							var cell = row.insertCell(-1);
+							cuenta++
+							
+							if (customcontent.length>0 && (("filedrag"+i+j)== customcontent[0][0])) {
+								cell.innerHTML = "<div class='filedrag' id='filedrag"+i+j+"'><img class='tagged' src='"+customcontent[0][1]+"'></div></td>"
+								customcontent.splice(0,1);
+							}else{
+								cell.innerHTML = "<div class='filedrag' id='filedrag"+i+j+"'><img class='tagged' src='"+src+"'></div></td>"
+							
+							}
+						}
+					}	
+				
+			
+		 
+					var dvTable = document.getElementById("dvTable");
+					dvTable.innerHTML = "";
+					dvTable.appendChild(table);
+					src = document.getElementsByClassName("filedrag")[0].childNodes[0].currentSrc;
+					
+					Init()					
+			
+			}
+
+			
+	
+			
+			
+		}else{
+		
+
+ 
+			//Create a HTML Table element.
+			var table = document.createElement("TABLE");
+			table.border = "0";
+	 
+			//Get the count of columns.
+			var columnCount = Number(x.value);
+			var rowCount = Number(y.value);
+			
+			
+			//Add the header row.
+			var row = table.insertRow(-1);
+			for (var i = 0; i < columnCount; i++) {
+				var headerCell = document.createElement("TH");
+				//headerCell.innerHTML = customers[0][i];
+				//if(i==0){
+					headerCell.innerHTML = "<div class='filedrag' id='filedrag0"+i+"'><img class='tagged' src='./resources/drop.png'></div></td>"
+
+				//}
+				row.appendChild(headerCell);
+			}
+	 
+			//Add the data rows.
+			var cuenta = i-1
+
+			for (var i = 1; i < rowCount; i++) {
+				row = table.insertRow(-1);
+				for (var j = 0; j < columnCount; j++) {
+					var cell = row.insertCell(-1);
+					cuenta++
+					
+					cell.innerHTML = "<div class='filedrag' id='filedrag"+i+j+"'><img class='tagged'src='./resources/drop.png'></div></td>"
+			   }
+			}
+	 
+			var dvTable = document.getElementById("dvTable");
+			dvTable.innerHTML = "";
+			dvTable.appendChild(table);
+			
+			Init()
+		}
+    }
+	
+
+	
+	// getElementById
+	function $id(id) {
+		return document.getElementById(id);
+	}
+
+
+	// output information
+	function Output(label,msg) {	
+
+		let element = document.getElementById(label);
+		element.removeChild(element.lastChild);	
+		
+		var m = $id(label);//$id("filedrag1");
+		//m.innerText = ""
+		m.className="filedrag"
+		
+		m.innerHTML = msg + m.innerHTML;
+
+
+		
+		// Store
+		//localStorage.setItem("filedrag1", document.getElementById("filedrag1").innerHTML);		
+		//localStorage.setItem("filedrag2", document.getElementById("filedrag2").innerHTML);	
+		//localStorage.setItem("filedrag3", document.getElementById("filedrag3").innerHTML);	
+		//localStorage.setItem("filedrag4", document.getElementById("filedrag4").innerHTML);			
+	}
+
+// output information
+	function Output2(label,msg) {		
+		var m = $id(label);//$id("filedrag1");
+		//m.innerText = ""
+		m.className="filedrag"
+		
+		if(msg=="borrar"){
+		
+		  let element = document.getElementById(label);
+		  element.removeChild(element.lastChild);
+
+		
+		}else{
+		
+			m.innerHTML =  m.innerHTML + msg;
+		}
+		
+		// Store
+		//localStorage.setItem("filedrag1", document.getElementById("filedrag1").innerHTML);		
+		//localStorage.setItem("filedrag2", document.getElementById("filedrag2").innerHTML);	
+		//localStorage.setItem("filedrag3", document.getElementById("filedrag3").innerHTML);	
+		//localStorage.setItem("filedrag4", document.getElementById("filedrag4").innerHTML);			
+	}
+
+	// file drag hover
+	function FileDragHover(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		//e.target.className = (e.type == "dragover" ? "hover" : "");
+	}
+	
+	
+// file click
+	function click(e,label) {
+	var error="./resources/aspa.png"
+	var acierto="./resources/check.png"
+	
+		if(document.getElementsByClassName("filedrag")[0].style.borderColor =="lawngreen"){
+			if(e.target.parentNode.children.length==1 ){
+			
+				Output2(e.target.parentNode.id,
+				'<img class="tag "src="' + acierto + '" />'
+				);
+									
+				music("1","1");
+				
+			}else if(e.target.parentNode.children.length==2){
+			
+			Output2(e.target.parentNode.id,
+				'borrar'
+				);
+
+			
+			}	
+		
+		}else if(document.getElementsByClassName("filedrag")[0].style.borderColor =="orangered"){
+		
+			if(e.target.parentNode.children.length==1 ){
+			
+				Output2(e.target.parentNode.id,
+				'<img class="tag "src="' + error + '" />'
+				);
+				music("2","1");			
+			
+			}else if(e.target.parentNode.children.length==2){
+			
+			Output2(e.target.parentNode.id,
+				'borrar'
+				);
+
+			
+			}
+				
+
+	
+		
+		}
+
+	
+	}
+
+
+	// file selection
+	function FileSelectHandler(e) {
+
+		// cancel event and hover styling
+		FileDragHover(e);
+
+		// fetch FileList object
+		var files = e.target.files || e.dataTransfer.files;
+
+		// process all File objects
+		for (var i = 0, f; f = files[i]; i++) {
+			ParseFile(e.currentTarget.id,f);
+		}
+
+	}
+
+
+	// output file information
+	function ParseFile(label,file) {
+
+
+		// display an image
+		if (file.type.indexOf("image") == 0) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				Output(label,
+					'<img class="tagged "src="' + e.target.result + '" />'
+				);
+			}
+			reader.readAsDataURL(file);
+		}
+
+
+	}
+
+
+	// initialize
+	function Init() {
+
+	
+			
+			
+		// file select
+		//fileselect1.addEventListener("change", FileSelectHandler, false);
+		//fileselect2.addEventListener("change", FileSelectHandler, false);
+		//fileselect3.addEventListener("change", FileSelectHandler, false);		
+		//fileselect4.addEventListener("change", FileSelectHandler, false);
+		
+		
+
+		// is XHR2 available?
+		var xhr = new XMLHttpRequest();
+		var elements = document.getElementsByClassName("filedrag");
+
+		//if (xhr.upload) {
+
+
+		
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].addEventListener('dragover', FileDragHover, false);
+				elements[i].addEventListener('dragleave', FileDragHover, false);
+				elements[i].addEventListener('drop', FileSelectHandler, false);
+				elements[i].addEventListener('click', click, false);
+
+				elements[i].style.display = "block";
+				$('.filedrag').attr('title','arrastra imagen')
+				
+				
+			}
+
+			// remove submit button
+			//submitbutton.style.display = "none";
+			
+						
+			
+		//}
+		
+			
+		
+
+	}	
+	
+	
+	function aciertos() {
+	   
+   		var elements = document.getElementsByClassName("filedrag");		
+		
+		
+		if(document.getElementsByClassName("filedrag")[0].style.borderColor == "lawngreen")		{
+		
+			for (var i = 0; i < elements.length; i++) {
+			elements[i].style.borderColor = "white";
+			elements[i].style.cursor = "";
+		
+			}		
+		
+		
+		}else{
+		
+		
+			for (var i = 0; i < elements.length; i++) {
+			elements[i].style.borderColor = "lawngreen";
+			elements[i].style.cursor = "pointer";
+		
+			}
+		 }
+		
+	}
+		
+		
+
+	
+	function fallos() {
+   
+   		var elements = document.getElementsByClassName("filedrag");		
+		
+		
+		if(document.getElementsByClassName("filedrag")[0].style.borderColor == "orangered")		{
+		
+			for (var i = 0; i < elements.length; i++) {
+			elements[i].style.borderColor = "white";
+			elements[i].style.cursor = "";
+		
+			}		
+		
+		
+		}else{
+		
+		
+			for (var i = 0; i < elements.length; i++) {
+			elements[i].style.borderColor = "orangered";
+			elements[i].style.cursor = "pointer";
+		
+			}
+		 }
+		
+	}
+	
+
+	function borrar() {
+	
+		var r = confirm("Estás seguro de borrar la porra actual?");
+			if (r == true) {
+			
+				GenerateTable("");	
+			}
+			
+
+	}
+	
+</script>			
+
+<script>		
+    let volume
+	function music(cancion,modo){	
+
+			//play
+			if(modo==='1'){
+	
+				if(typeof myAudio === "undefined"){	
+
+					if(cancion==='1'){
+					
+						let rnd1 = Math.floor(Math.random() * 4)+1						
+
+					
+						myAudio = new Audio('./resources/'+rnd1+'.mp3');
+						myAudio.volume = 0.20;		
+
+					}else if(cancion==='2'){
+					
+						let rnd1 = Math.floor(Math.random() * 4)+5				
+
+						myAudio = new Audio('./resources/'+rnd1+'.mp3');
+
+						if(rnd1==8){
+						myAudio.volume = 0.20;		
+						}else{
+						myAudio.volume = 0.50;		
+						}					
+				
+					}
+					
+					if (typeof myAudio.loop == 'boolean')
+					{
+						myAudio.loop = false;
+					}
+					
+					
+					
+					
+					
+				}else{
+				
+					myAudio.pause();
+					if(typeof myAudio2 !== "undefined"){	
+						  myAudio2.volume = volume;
+					}
+					
+					
+					if(cancion==='1'){
+					
+						let rnd1 = Math.floor(Math.random() * 4)+1						
+
+					
+						myAudio = new Audio('./resources/'+rnd1+'.mp3');
+						myAudio.volume = 0.20;		
+
+					}else if(cancion==='2'){
+					
+						let rnd1 = Math.floor(Math.random() * 4)+5				
+
+						myAudio = new Audio('./resources/'+rnd1+'.mp3');
+						if(rnd1==8){
+						myAudio.volume = 0.20;		
+						}else{
+						myAudio.volume = 0.50;		
+						}
+										
+				
+					}				
+
+				}				
+				
+				if(document.getElementById("vol").innerHTML=="🔇"){
+				
+				}else{
+				
+					if(typeof myAudio2 !== "undefined"){	
+						volume = myAudio2.volume												
+						myAudio2.volume = 0.03;				
+										
+						myAudio.play();	
+						myAudio.onended = function(){
+						myAudio2.volume = volume;
+						}
+
+
+					}else{
+						myAudio.play();	
+
+					}
+						
+					
+				}
+
+
+
+	
+	
+		//stop
+		}else if(modo==='2'){
+		
+					
+			let volicon = document.getElementById("vol").innerHTML;
+			
+			if(volicon== "🔈"){
+				document.getElementById("vol").innerHTML="🔇";
+				document.getElementById("vol").parentNode.style.marginTop="150";
+				if(typeof myAudio !== "undefined"){		
+					let volume = myAudio2.volume
+					myAudio.volume = 0	
+
+				}	
+				
+			}else{
+				document.getElementById("vol").innerHTML="🔈";
+				document.getElementById("vol").parentNode.style.marginTop="150";
+			}
+ 
+		
+		}
+		
+		
+	}	
+	
+	function music2(cancion,modo){	
+	
+			//play
+			if(modo==='1'){
+	
+				if(typeof myAudio2 === "undefined"){	
+				
+					if(cancion==='1'){
+						myAudio2 = new Audio('./resources/bso.mp3');
+						myAudio2.volume = 0.20;		
+					}else if(cancion==='2'){
+						myAudio2 = new Audio('./resources/bso2.mp3'); 
+						myAudio2.volume = 0.20;						
+					}else if(cancion==='3'){
+						myAudio2 = new Audio('./resources/bso3.mp3'); 
+						myAudio2.volume = 0.20;	
+					}else if (cancion==='4'){
+						myAudio2 = new Audio('./resources/bso4.mp3'); 
+						myAudio2.volume = 0.20;	
+					}else if (cancion==='5'){
+						myAudio2 = new Audio('./resources/bso5.mp3'); 
+						myAudio2.volume = 0.20;							
+					}else if (cancion==='6'){
+						myAudio2 = new Audio('./resources/bso6.mp3'); 
+						myAudio2.volume = 0.20;							
+					}else if (cancion==='7'){
+						myAudio2 = new Audio('./resources/bso7.mp3'); 
+						myAudio2.volume = 0.20;							
+						
+					}
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+				}			
+					myAudio2.play();
+					
+					
+					if(cancion==='1'){
+						document.getElementById("musicinfo").innerHTML ="2Night + Highway: www.soundcloud.com/top-flow-official";					
+					}else if (cancion==='2') {
+						document.getElementById("musicinfo").innerHTML ="WAVES: www.audiotool.com/user/tomderry/";	
+					}else if(cancion==='3'){
+						document.getElementById("musicinfo").innerHTML ="DREAMS: www.bensound.com/royalty-free-music/track/dreams-chill-out";																								
+					}else if(cancion==='4'){
+						document.getElementById("musicinfo").innerHTML ="Midnight Drive: www.audiotool.com/user/escapingreality";						
+					}else if(cancion==='5'){
+						document.getElementById("musicinfo").innerHTML ="E.R.F. :www.bensound.com/royalty-free-music/track/erf";						
+					}else if(cancion==='6'){
+						document.getElementById("musicinfo").innerHTML ="SEXY: www.bensound.com/royalty-free-music/track/erf";						
+					}else if(cancion==='7'){
+						document.getElementById("musicinfo").innerHTML ="Kovan&Electro-Light-Skyline: www.soundcloud.com/darren-reed-614217687";						
+					}							
+				
+
+		//stop
+		}else if(modo==='2'){
+		
+			if(typeof myAudio2 !== "undefined"){
+				myAudio2.pause();
+				document.getElementById("musicinfo").innerText ="";	
+			}
+			
+			
+		//shuffle	
+		}else if(modo==='3') {
+		
+			let lastvolume=0;
+		
+			if(typeof myAudio2 !== "undefined"){
+				lastvolume= myAudio2.volume;
+				myAudio2.pause();
+			}		
+		
+			if(cancion==='1'){
+				cancion='2'
+
+				myAudio2 = new Audio('./resources/bso2.mp3'); 
+				if(lastvolume>0){
+					myAudio2.volume = lastvolume;
+
+				}else{
+					myAudio2.volume = 0.20;
+				}
+										
+
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+							
+					myAudio2.play();
+					localStorage.setItem("music", cancion);			
+					document.getElementById("musicinfo").innerHTML ="WAVES: www.audiotool.com/user/tomderry/";	
+					
+				
+			}else if(cancion==='2'){
+				cancion='3'
+					
+				myAudio2 = new Audio('./resources/bso3.mp3'); 
+				if(lastvolume>0){
+					myAudio2.volume = lastvolume;
+
+				}else{
+					myAudio2.volume = 0.20;
+				}					
+					
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+							
+					myAudio2.play();
+					localStorage.setItem("music", cancion);			
+
+					
+					document.getElementById("musicinfo").innerHTML =" DREAMS: www.bensound.com/royalty-free-music/track/dreams-chill-out";	
+							
+				
+			}else if(cancion==='3'){
+				cancion='4'
+					
+					myAudio2 = new Audio('./resources/bso4.mp3'); 
+				if(lastvolume>0){
+					myAudio2.volume = lastvolume;
+
+				}else{
+					myAudio2.volume = 0.20;
+				}		
+					
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+							
+					myAudio2.play();
+					localStorage.setItem("music", cancion);			
+
+					
+					document.getElementById("musicinfo").innerHTML ="Midnight Drive: www.audiotool.com/user/escapingreality";						
+									
+				
+				
+			}else if(cancion==='4'){
+				cancion='5'
+					
+					myAudio2 = new Audio('./resources/bso5.mp3'); 
+					if(lastvolume>0){
+						myAudio2.volume = lastvolume;
+
+					}else{
+						myAudio2.volume = 0.20;
+					}	
+					
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+							
+					myAudio2.play();
+					localStorage.setItem("music", cancion);			
+
+					
+					document.getElementById("musicinfo").innerHTML ="E.R.F. :www.bensound.com/royalty-free-music/track/erf";						
+				
+				
+			}else if(cancion==='5'){
+				cancion='6'
+					
+					myAudio2 = new Audio('./resources/bso6.mp3'); 
+					if(lastvolume>0){
+						myAudio2.volume = lastvolume;
+
+					}else{
+						myAudio2.volume = 0.20;
+					}	
+					
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+							
+					myAudio2.play();
+					localStorage.setItem("music", cancion);			
+
+					
+					document.getElementById("musicinfo").innerHTML ="SEXY: www.bensound.com/royalty-free-music/track/erf";	
+					
+			}else if(cancion==='6'){
+				cancion='7'
+					
+					myAudio2 = new Audio('./resources/bso7.mp3'); 
+					if(lastvolume>0){
+						myAudio2.volume = lastvolume;
+
+					}else{
+						myAudio2.volume = 0.20;
+					}	
+					
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+							
+					myAudio2.play();
+					localStorage.setItem("music", cancion);			
+
+					
+					document.getElementById("musicinfo").innerHTML ="Kovan&Electro-Light-Skyline: www.soundcloud.com/darren-reed-614217687";				
+
+			}else{
+				cancion='1'
+					
+					myAudio2 = new Audio('./resources/bso.mp3');
+					if(lastvolume>0){
+						myAudio2.volume = lastvolume;
+
+					}else{
+						myAudio2.volume = 0.20;
+					}		
+
+					
+					
+					if (typeof myAudio2.loop == 'boolean')
+					{
+						myAudio2.loop = true;
+					}
+					else
+					{
+						myAudio2.addEventListener('ended', function() {
+						if(myAudio2.paused){
+							this.currentTime = 0;				
+							this.play();
+							}
+						}, false);
+					}
+							
+					myAudio2.play();
+					localStorage.setItem("music", cancion);						
+
+					document.getElementById("musicinfo").innerHTML ="2Night + Highway: www.soundcloud.com/top-flow-official";						
+										
+
+			}
+		
+		
+		
+		//volup
+		}else if(modo==='4'){
+		
+			if(typeof myAudio2 !== "undefined"){
+				myAudio2.volume += 0.05
+				volume = myAudio2.volume
+			}		
+		
+		
+		
+		//voldown
+		}else{
+		
+		
+			if(typeof myAudio2 !== "undefined"){
+			
+				if(myAudio2.volume<=0.05){
+					myAudio2.volume = 0				
+				}else{
+					myAudio2.volume -= 0.05				
+				}
+				volume = myAudio2.volume
+			}		
+		
+		}
+		if(typeof myAudio2 !== "undefined"){	
+			var audiovol = eval(myAudio2.volume/1)*100;
+			document.getElementById('volupp').setAttribute('title', 'Subir volumen: '+ Math.floor(Math.round(audiovol))+'%');	
+			document.getElementById('voldown').setAttribute('title', 'Bajar volumen: '+ Math.floor(Math.round(audiovol))+'%');	
+
+
+		}
+	}		
+	
+	
+</script>		
+v.0.2	
+    </body>
+</html>

@@ -1,0 +1,943 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  width: 606px;
+  margin: 0 auto;
+  z-index: 0;
+  color: white;
+}
+
+section:after {
+  position: absolute;
+  left: 0;
+  top: 38px;
+  width: 100%;
+  font-size: 1.8em;
+  text-align: center;
+  background-color: #5E6B7F;
+  padding: 40px 0;
+}
+
+#butcustom1 {
+  cursor: pointer;
+  width: 99px;
+  display: inline-block;
+  background-color: #5E6B7F;
+  color: white;
+  text-align: center;
+  transition: .40s ease;
+  border: none;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+}
+
+#butcustom0 {
+  cursor: pointer;
+  width: 99px;
+  display: inline-block;
+  background-color: #5E6B7F;
+  color: white;
+  text-align: center;
+  transition: .40s ease;
+  border: none;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+}
+
+#butcustom2 {
+  cursor: pointer;
+  width: 99px;
+  //display: inline-block;
+  background-color: silver;
+  color: red;
+  text-align: center;
+  margin: 0 0 0 45%;
+  transition: .50s ease;
+  border-radius: 5px 5px 5px 5px;
+}
+
+
+#butcustom0:focus {
+  //background-color:green;
+  outline: none;
+}
+
+#butcustom1:focus {
+  //background-color:green;
+  outline: none;
+}
+
+#butcustom2:focus {
+  outline: none;
+  background-color:rgba(255,0,0,0.75) ;
+  color:white;
+}
+
+
+#divcustom0 {
+  display: inline-block;
+}
+
+#divcustom1 {
+  display: inline-block;
+}
+
+
+
+
+
+
+body
+{
+    font-family: arial;
+}
+
+a {
+     cursor: pointer;
+}
+
+#placeholder {
+  height: 120px;
+  width: 120px;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 1px solid white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border-radius: 10px;  
+  font-size:60px;
+  cursor:pointer;
+ 
+
+}
+
+div.filedrag
+
+{
+	display: true;
+	font-weight: normal;
+	width: 110px;
+	height:110px;
+	text-align: center;
+	padding: 1em 0;
+	/*margin: 1em 0;*/
+	/*color: red;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	border: 1px inset white;/*#555*/
+	border-radius: 7px;
+	cursor: default;
+	text-align:center;
+  position: relative;
+
+
+} 
+
+.estilado{
+	
+	overflow: hidden;
+    height: 74px;
+    width: 65px;
+    background:  no-repeat right center #5c5c5c;
+	
+}
+
+
+
+.estilado select {
+font-size: 40px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    width: 65px;
+    overflow: hidden;
+    padding-top: 15px;
+    height: 70px;
+    color: #ffffff;
+    -webkit-appearance: none;
+	text-align-last:center;
+	cursor:pointer;
+}
+
+
+.estilado option.opciones {
+    font-size: 24px;
+    padding: 5px;
+    background: #5c5c5c;
+	
+
+}
+	
+div.pos{
+	position:absolute;
+	width:27px;
+	height:27px;
+	margin-top:-20px;
+	margin-left:95px;
+	background: #1a1a17;
+	
+	    border: 1px solid white;
+	/*border-radius: 50%;*/
+}
+
+div.ranking{
+	position:absolute;
+	width:30px;
+	height:30px;
+	margin-top:-120px;
+	margin-left:-10px;
+	background: purple;
+	border-radius: 50%;
+}
+
+div.rankingRank{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+	color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+	background: purple;
+}
+
+
+div.ranking p{
+	text-align:center;
+	font-size: 18px;
+	margin-top:5px;
+	font-color:white;
+
+}
+
+div.pos p{
+	text-align:center;
+	font-size: 13px;
+	margin-top:5px;
+	font-color:white;
+
+}
+
+
+.mytable2{
+	
+display: inline-block;
+}
+
+
+.tagged{
+  position: relative;
+  top: 0;
+  left: 0;
+  	width: 100%;
+	height: 100%;
+	object-fit: contain;	
+}
+
+.tag{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  	width: 70%;
+	height: 70%;
+	object-fit: contain;	
+	opacity: 0.7;
+}
+
+
+
+}
+
+div.filedrag.hover
+{
+	color: #f00;
+	border-color: #f00;
+	border-style: solid;
+	box-shadow: inset 0 3px 4px #888;
+}
+
+
+
+
+
+
+label.fnorm{
+	color: #6fe8f0;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	font-weight: bold;
+
+}
+input.fnorm{
+	width: 30px;	
+	color: black;/*#555*/
+	border: 2px  black;/*#555*/
+	border-style: solid;
+	font-weight: bold;
+	
+	
+}
+
+
+
+
+label.fporz{
+	color: #86ef6f;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	font-weight: bold;
+
+}
+input.fporz{
+	width: 30px;	
+	color: black;/*#555*/
+	border: 2px  black;/*#555*/
+	border-style: solid;
+	font-weight: bold;
+	
+	
+}
+
+
+label.fmamb{
+	color: #ef6f6f;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	font-weight: bold;
+
+}
+input.fmamb{
+	width: 30px;	
+	color: black;/*#555*/
+	border: 2px  black;/*#555*/
+	border-style: solid;
+	font-weight: bold;
+	
+	
+}
+
+
+label.fmult{
+	color: #fff200;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	font-weight: bold;
+
+}
+input.fmult{
+	width: 30px;	
+	color: black;/*#555*/
+	border: 2px  black;/*#555*/
+	border-style: solid;
+	font-weight: bold;
+	
+	
+}
+
+p.puntos1{
+	color:#fff200;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	border: 2px  black;/*#555*/
+	font-weight: bold;
+	
+	
+}
+
+td.puntos1{
+
+	border: 2px  white;/*#555*/
+	color:#fff200;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size:35;
+	font-weight:bold;
+	margin:19% 0 0 0;	
+	padding-left: 5px;	
+}
+
+p.puntos2{
+	color:#fff200;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	border: 2px  black;/*#555*/
+	font-weight: bold;
+	
+	
+}
+
+td.puntos2{
+
+	border: 2px  white;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	color:#fff200;
+	font-size:35;
+	font-weight:bold;
+	padding-left: 5px;		
+	
+}
+
+
+
+
+p.puntos3{
+	color:#fff200;
+	border: 2px  black;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	font-weight: bold;
+	
+	
+}
+
+td.puntos3{
+
+	border: 2px  white;/*#555*/
+	color:#fff200;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	font-size:35;
+	font-weight:bold;
+	padding-left: 5px;		
+	
+}
+
+
+.puntos4cont{
+	visibility:hidden;
+	
+	
+}
+
+p.puntos4{
+	color:#fff200;
+	border: 2px  black;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	font-weight: bold;
+	
+	
+}
+
+td.puntos4{
+		visibility:hidden;
+
+
+	border: 2px  white;/*#555*/
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+	color:#fff200;
+	font-size:35;
+	font-weight:bold;
+	padding-left: 5px;			
+	
+}
+
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+	object-fit: cover;
+}
+
+button.edit4{
+		visibility:hidden;
+}
+
+
+
+/* Sets the background image for the wheel */
+td.the_wheel
+{
+	margin-right: 0px;
+	margin-left: 0px;
+	width:400px;
+	/*background-image: url(./wheel_back.png);
+	background-size:300px;
+    background-position: top-left;*/
+    background-repeat: no-repeat;
+}
+
+table.juegoimgs{
+		margin-left: 0px;
+		margin-top:  8px;
+}
+
+
+/* Do some css reset on selected elements */
+h1, p
+{
+    margin: 0;
+}
+
+div.power_controls
+{
+    margin-right:0px;
+
+}
+
+div.html5_logo
+{
+    margin-left:70px;
+}
+
+/* Styles for the power selection controls */
+table.power
+{
+    background-color: #cccccc;
+    cursor: pointer;
+	width:150px;
+    border:1px solid #333333;
+}
+
+table.power th
+{
+    background-color: white;
+    cursor: default;
+}
+
+
+table.tokentable{
+	background-color:transparent ;
+	
+}
+
+table.tokentable.invitado
+{
+    background-color: #000000;
+    cursor: default;
+}
+
+table.tokentable.tapon
+{
+    background-color: #000000;
+    cursor: default;
+}
+
+#invitado
+{
+	color:#ffffff;
+    background-color: #000000;
+    cursor: default;
+}
+
+
+#visage
+{
+	color:#ffffff;
+    background-color: #000000;
+    cursor: default;
+}
+
+#bote
+{
+	color:#ffffff;
+    background-color: #000000;
+    cursor: default;
+}
+
+#tapon
+{
+	color:#ffffff;
+    background-color: #000000;
+    cursor: default;
+}
+
+p.posi
+{
+	width: 90px;
+    overflow: hidden;
+	display: inline-block;
+	font-size:34;
+	color:green;
+	font-weight:bold;
+	-webkit-text-stroke: 1px BLACK;
+
+}
+
+
+td.pw1
+{
+    background-color: #6fe8f0;
+		font-weight:bold;
+
+}
+
+td.pw2
+{
+    background-color: #86ef6f;
+		font-weight:bold;
+
+}
+
+td.pw3
+{
+    background-color: #ef6f6f;
+		font-weight:bold;
+
+}
+
+td.pw0
+{
+    background-color: #FF33EC;
+		font-weight:bold;
+
+}
+
+
+
+/* Style applied to the spin button once a power has been selected */
+img.clickable
+{
+    cursor: pointer;
+
+}
+
+#spin_button:active {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+animation-delay: 0.5s;  
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* Other misc styles */
+.margin_bottom
+{
+    margin-bottom: 5px;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.blink {
+	width: 30px;	
+	border: 2px  black;/*#555*/
+	font-weight: bold;
+	-webkit-animation: blink 1.75s linear;
+	 animation: blink 1.75s linear;
+	 animation-iteration-count: infinite;	 
+}
+
+@keyframes blink {
+	0% { opacity: 1; background: green;}
+	50% { opacity: 1; background: green; }
+	100% { opacity: 1; background: white; }
+}
+
+
+.blink2 {
+	width: 30px;	
+	border: 2px  black;/*#555*/
+	font-weight: bold;
+	-webkit-animation: blink 1.75s linear;
+	 animation: blink 1.75s linear;
+	 animation-iteration-count: infinite;	 
+}
+
+@keyframes blink2 {
+	0% { opacity: 1; background: green; }
+	50% { opacity: 1; background: green; }
+	100% { opacity: 1; background: white; }
+}
+
+.blink3 {
+	width: 30px;	
+	border: 2px  black;/*#555*/
+	font-weight: bold;
+	-webkit-animation: blink 1.75s linear;
+	 animation: blink 1.75s linear;
+	 animation-iteration-count: infinite;	 
+}
+
+@keyframes blink3 {
+	0% { opacity: 1; background: green;}
+	50% { opacity: 1; background: green; }
+	100% { opacity: 1; background: white; }
+}
+
+.magnifier-thumb-wrapper {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0
+}
+
+.magnifier-lens {
+    position: absolute;
+    border: solid 1px #ccc;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    overflow: hidden
+}
+
+.magnifier-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid 1px #ccc;
+    color: #fff;
+    text-align: center;
+    background: transparent;
+    background: rgba(50, 50, 50, 0.5);
+    z-index: 1000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F323232,endColorstr=#7F323232)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F323232,endColorstr=#7F323232)
+}
+
+.magnifier-loader-text {
+    font: 13px Arial;
+    margin-top: 10px
+}
+
+.magnifier-large {
+    position: absolute;
+    z-index: 100
+}
+
+.magnifier-preview {
+    padding: 0;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden
+}
+
+.magnifier-preview img {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.opaque {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50)
+}
+
+.hidden {
+    display: none
+}
+
+.canvas{
+	    margin-left: 10;
+}
+#save1{
+	
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid green;
+  background-color: transparent;
+  border-radius: 5px;  
+  cursor:pointer;	
+}
+#save2{
+	
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid green;
+  background-color: transparent;
+  border-radius: 5px;  
+  cursor:pointer;	
+}
+#save3{
+	
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid green;
+  background-color: transparent;
+  border-radius: 5px;  
+  cursor:pointer;	
+}
+#save4{
+	
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid green;
+  background-color: transparent;
+  border-radius: 5px;  
+  cursor:pointer;	
+}
+
+#edit0{
+ margin-top: 0px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 50px;
+  width: 50px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+
+#editv{
+  margin-top: 0px;
+  margin: 10px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+  background-repeat: no-repeat;
+  background-size:  100% 100%;
+  background-color: white;	
+  height: 50px;
+  width: 50px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  font-weight:bold;
+  
+}
+
+#edit001{
+ margin-top: 0px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 35px;
+  width: 35px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit002{
+ margin-top: 0px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 35px;
+  width: 35px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit003{
+ margin-top: 0px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 35px;
+  width: 35px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit004{
+ margin-top: 0px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 35px;
+  width: 35px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit005{
+ margin-top: 0px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;	
+  height: 35px;
+  width: 35px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit1{
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit2{
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit3{
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}
+#edit4{
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;	
+  height: 30px;
+  width: 30px;
+  border: 1px solid red;
+  border-radius: 5px;  
+  cursor:pointer;
+  
+}

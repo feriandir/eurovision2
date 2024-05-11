@@ -1,0 +1,1 @@
+Foreach($line in Get-Content "listabanderas.txt")  { Wget -uri $line -outfile $line.replace("-WHITE","").Substring(72)}

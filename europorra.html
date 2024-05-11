@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="./resources/w2ui-2.0.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Table with Dropdown Lists</title>
+<style>
+  table {
+    border-collapse: collapse;
+	    border: 2px solid black;
+
+  }
+   th {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+    td {
+    border: 2px solid transparent;
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+<title>EUROPORRA</title>
+        <link rel="stylesheet" href="main.css" type="text/css" id="default"/>
+        <script type="text/javascript" src="fondo.js"></script>			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./resources/w2ui-2.0.min.js"></script>
+</head>
+ <body id="html-content-holder" style="background-color: #1a1a17; background-repeat: no-repeat; background-size: 100% 100%;"> 
+	<table id="dvTable">
+	
+	</table>	
+<!--	
+	<table id="hdTable" >	
+
+		<tr>
+			<td>
+			<img src="./resources/acierto.png" style="width:40px;margin-left: -0%;margin-top:150;cursor:pointer;" title="Selecciona aciertos" onclick="aciertos()">
+			<img src="./resources/fallo.png" style="width:38px;margin-top:1px;cursor:pointer;" title="Selecciona fallos" onclick="fallos()">
+			<img src="./resources/borrar.png" style="width:40px;margin-top:1px;cursor:pointer;" title="Borra porra actual" onclick="borrar()">
+			
+
+			</td>
+			<td>
+			<img src="./resources/lazo.png" style="width:300px;margin-top:1px;margin-left: 20%;;" title="Doritos para todos!">
+			</td>
+			
+			<td> 
+			<div style="margin-top:150;margin-left: 150;">
+			<a href="javascript:music('1','2');" id="vol" style="color:#1a1a17;width:50px;cursor:pointer;font-size:40" title="Activar/Desactivar efectos de sonido">馃攬</a>
+			</div>
+			</td>
+			<td>
+			<img class="popup_image" src="./resources/new.png" style="width:35px;margin-top:1px;margin-top:150;cursor:pointer;" title="Instrucciones"  onclick="popup2()">
+			</td>			
+			<td style="color:white">
+			<img class="popup_image" src="./resources/help.png" style="width:40px;margin-top:1px;margin-top:150;cursor:pointer;" title="Instrucciones"  onclick="popup1()">
+			</td>
+			
+
+
+
+		</tr>	
+		
+	</table>			
+!-->
+
+	<CENTER style="color:white">
+	<table id="dvTable">			
+	</table>
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>PAIS</th>
+      <th>PUNTOS</th>
+      <th>PAIS</th>
+      <th>PUNTOS</th>
+	  <th>PAIS</th>
+      <th>PUNTOS</th>
+      <th>PAIS</th>
+      <th>PUNTOS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Using JavaScript to generate rows and dropdowns -->
+  </tbody>
+</table>
+
+<script>
+  // Function to generate dropdown HTML
+  function generateDropdown(modo) {
+    var options = [12, 10, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+	
+    var dropdownHTML = "<div class='estilado'><select>";
+    var imgHTML = "<div class='filedrag'><img id='images'";
+	var selects=0
+
+	
+	if(modo==1){
+		options.forEach(function(option) {
+		
+			if(selects==options.length-1){
+			  dropdownHTML += "<option selected='selected' class='opciones'>" + option + "</option>";
+				
+			}else{
+			 dropdownHTML += "<option class='opciones'>" + option + "</option>";
+		
+			}
+			selects++
+		});
+		selects=0
+		dropdownHTML += "</select></div>";
+		return dropdownHTML;
+	}else{
+	
+		//banderas.forEach(function(bandera) {
+		  imgHTML += " src=./resources/banderas/" + modo[0] +".png style='width:80px;margin-top:1px;'>" ;
+		//});
+		
+		imgHTML += "<p>" + modo[0] +"</p></div>";
+		return imgHTML;	
+	
+	}
+  }
+  
+
+  // Function to generate table rows
+  function generateTable() {
+  var banderas =
+	["FRANCE", 
+	"SPAIN", 
+	"GERMANY", 
+	"ITALY", 
+	"SWEDEN", 
+	"UNITEDKINGDOM", 
+	"CROATIA", 
+	"LUXEMBOURG", 
+	"UKRAINE", 
+	"CYPRUS", 
+	"PORTUGAL", 
+	"FINLAND", 
+	"SERBIA", 
+	"IRELAND", 
+	"SLOVENIA", 
+	"LITHUANIA", 
+	"ALBANIA", 
+	"ARMENIA", 
+	"AUSTRIA", 
+	"BELGIUM", 
+	"CZECHIA", 
+	"DENMARK", 
+	"ESTONIA", 
+	"GEORGIA", 
+	"GREECE", 
+	"ISRAEL", 
+	"LATVIA", 
+	"MALTA", 
+	"NETHERLANDS", 
+	"NORWAY", 
+	"SANMARINO",	
+	"SWITZERLAND"];
+	var dropdowns = 0
+	var elementos = banderas.length
+    var tableBody = document.querySelector("#myTable tbody");
+    for (var i = 0; i < (elementos/2); i++) {
+      var row = tableBody.insertRow();
+      for (var j = 0; j < 4; j++) {
+        var cell = row.insertCell();
+		if (j%2 == 1){			
+
+			if( dropdowns < elementos){
+				cell.innerHTML = generateDropdown(1);
+				dropdowns++
+			}
+			
+		}else{
+		
+			if(banderas.length>=1){
+		
+				cell.innerHTML = generateDropdown(banderas);
+				banderas.splice(0,1)
+			}
+		}
+      }
+    }
+  }
+
+  // Call the function to generate the table
+  generateTable();
+</script>
+
+</body>
+</html>
